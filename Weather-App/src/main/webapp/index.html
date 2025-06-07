@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .weather-main {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .weather-icon {
+      font-size: 4em;
+      margin: 20px 0;
+    }
+
+    .input-form input {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 60%;
+      margin-right: 10px;
+    }
+
+    .input-form button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #00bcd4;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .input-form button:hover {
+      background-color: #008ba3;
+    }
+
+    .forecast {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .day {
+      text-align: center;
+    }
+
+    .day-icon {
+      font-size: 2em;
+    }
+
+    .temp-range {
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌦️ Weather Forecast</h1>
+    <form action="WeatherApp" method="post" class="input-form">
+      <input type="text" name="city" placeholder="Enter City" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="weather-main">
+      <div class="weather-icon">⛈️</div>
+      <div style="font-size: 2em;">${temperature}°C</div>
+      <div style="font-size: 1.2em;">${weatherCondition}</div>
+      <div style="font-size: 1em;">${cityName}</div>
+      <div>H: ${highTemp}°C | L: ${lowTemp}°C</div>
+    </div>
+
+    <div class="forecast">
+      <div class="day">
+        <div>Mon</div>
+        <div class="day-icon">☀️</div>
+        <div class="temp-range">76° - 90°</div>
+      </div>
+      <div class="day">
+        <div>Tue</div>
+        <div class="day-icon">⛈️</div>
+        <div class="temp-range">68° - 86°</div>
+      </div>
+      <div class="day">
+        <div>Wed</div>
+        <div class="day-icon">🌦️</div>
+        <div class="temp-range">70° - 88°</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
