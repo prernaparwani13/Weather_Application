@@ -32,8 +32,6 @@ A Java-based web application that provides real-time weather information using t
 
 ## 📁 Project Structure
 
-## 📁 Project Structure
-
 WeatherApp/
 ├── WebContent/
 │ ├── index.html # Homepage
